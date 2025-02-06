@@ -1,0 +1,563 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #0e0e0e;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: linear-gradient(90deg, #1a1a1a, #3a3a3a);
+    padding: 20px;
+    text-align: center;
+}
+
+h1.text-4xl {
+    font-size: 3.2rem; /* Increase size */
+    font-weight: 800; /* Make it bold */
+    letter-spacing: 2px; /* Add spacing between letters for a modern look */
+    color: #00ffcc; /* Make it stand out with a vibrant color */
+    text-shadow: 2px 2px 5px rgba(0, 255, 204, 0.5) /* Add a glowing effect */
+    margin: 0; /* Remove default margin for better alignment */
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+p.text-4xl {
+    font-size: 1.5rem; /* Larger text for impact */
+    font-weight: 800; /* Extra bold */
+    /*font-family: 'Bangers', cursive; /* Graffiti-style font */
+    text-transform: uppercase; /* Graffiti often looks better in caps */
+    letter-spacing: 2px; /* Slight spacing for style */
+    /*color: #06b800; /* Bold, fiery orange */
+    /*text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8); /* Strong glow effect */
+
+    background: linear-gradient(135deg, #FFCC00, #FF9900);
+    -webkit-background-clip: text; /* For Webkit-based browsers (Chrome, Safari, etc.) */
+    background-clip: text; /* Standard background-clip for other browsers */
+    color: transparent; /* Make the text color transparent to show gradient */
+    /*font-weight: bold;*/
+    font-family: 'Bangers', cursive; /* Retain the graffiti-style font */
+    /*font-size: 1.5rem;*/
+    /*text-transform: uppercase;
+    letter-spacing: 2px;*/
+    text-shadow: 3px 3px 8px rgba(255, 239, 8, 0.8); /* Optional: Keep the text shadow effect */
+}
+/***********************************************************************************************************************************************/
+/***********************************************************************************************************************************************/
+.charles-text {
+    background: linear-gradient(135deg, #FFCC00, #FF9900);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 1.875rem; /* text-3xl */
+    font-weight: bold;
+    display: inline; /* Ensures no block-level background */
+    padding: 0; /* Remove any extra spacing */
+    border: none; /* Prevents any default outlines */
+}
+.mt-4.block {
+    color: #00ffcc !important;
+}
+
+/*************************************************************************************************************
+**********************Navbar**********************************************************************************
+**************************************************************************************************************/
+
+nav {
+    margin: 20px 0;
+}
+
+nav .dropdown {
+    display: none; /* Hide dropdown by default */
+}
+
+nav .dropbtn {
+    background-color: #00ffcc; /* Button background color */
+    color: white; /* Button text color */
+    padding: 10px 20px; /* Button padding */
+    border: none; /* Remove border */
+    cursor: pointer; /* Change cursor on hover */
+}
+
+/* Dropdown content (hidden by default) */
+nav .dropdown-content {
+    display: none; /* Hide dropdown content by default */
+    position: absolute; /* Positioning for dropdown */
+    background-color: white; /* Dropdown background color */
+    min-width: 160px; /* Minimum width */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Add shadow */
+    z-index: 1; /* Ensure dropdown appears above other elements */
+}
+
+/* Display dropdown content when the button is hovered */
+nav .dropdown:hover .dropdown-content {
+    display: block; /* Show dropdown on hover */
+}
+
+nav .nav-links {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margins */
+    display: flex; /* Use flexbox layout */
+    justify-content: center; /* Center items horizontally */
+}
+
+nav .nav-links li {
+    display: inline; /* Display items inline */
+    margin-right: 15px; /* Add space between navigation items */
+}
+
+nav .nav-links a {
+    color: #00ffcc;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid #00ffcc;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+    border-top: none; /* Remove top border */
+    border-bottom: none; /* Remove bottom border */
+}
+
+/* Hover effect for links */
+nav .nav-links a:hover {
+    background: #00ffcc;
+    color: #0e0e0e;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    nav .dropdown {
+        display: block; /* Show dropdown button on small screens */
+    }
+
+    nav .nav-links {
+        display: none; /* Hide the nav links on small screens */
+    }
+
+    nav .dropdown-content {
+        display: block; /* Show dropdown content when button is clicked */
+        position: relative; /* Positioning relative to the button */
+    }
+
+    nav .dropdown-content ul {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+    }
+
+    nav .dropdown-content li {
+        margin: 10px 0; /* Add vertical space between navigation items */
+    }
+}
+
+
+
+
+section {
+    padding: 20px;
+    border: 1px solid #3a3a3a;
+    border-radius: 10px;
+    margin: 20px;
+    background-color: #1a1a1a;
+}
+
+/******************home image**********************/
+
+.homeimage {
+    display: flex; /* Use flexbox for layout */
+    justify-content: flex-end; /* Align content to the right */
+    margin-top: 20px; /* Add some space above the image */
+}
+
+.homeimage img {
+    max-width: 100%; /* Make image responsive */
+    max-height: 500px; /* Set maximum height for the image */
+    height: auto; /* Maintain aspect ratio */
+    border: 2px solid #00ffcc; /* Add border to the image */
+    border-radius: 10px; /* Rounded corners for the image */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Shadow for better visual effect */
+}
+/*************************************************************************************************************/
+/****************My Services images**************************************************************************/
+
+.images {
+    display: flex; /* Use flexbox for a row layout */
+    justify-content: center; /* Center the images */
+    flex-wrap: wrap; /* Allow wrapping to the next line on smaller screens */
+    gap: 20px; /* Space between the images */
+    margin: 20px 0; /* Margin above and below the images section */
+}
+
+.images img {
+    max-width: 100%; /* Make images responsive */
+    max-height: 550px; /* Set maximum height for the images */
+    height: auto; /* Maintain aspect ratio */
+    border: 2px solid #00ffcc; /* Add border to images */
+    border-radius: 10px; /* Rounded corners for images */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Shadow for a better visual effect */
+    width: calc(30% - 20px); /* Adjust width to 30% to make images smaller */
+    transition: transform 0.3s; /* Smooth scaling on hover */
+}
+
+.images img:hover {
+    transform: scale(1.05); /* Slightly enlarge image on hover */
+}
+/***********************************************************************************************************/
+/*************services slide*******************************************************************************/
+/* Service Slide Container */
+.service-slide {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Slide (Default Layout for Desktop) */
+.slide {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.slide img {
+    width: 300px; /* Adjust the size of the images */
+    height: 200px;
+    margin-right: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for futuristic feel */
+    object-fit: cover;
+    border: 2px solid #00ffcc; /* Add border to the image */
+    border-radius: 10px; /* Rounded corners for the image */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    /* Switch to grid layout for mobile view */
+    .slide {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Two columns for mobile */
+        gap: 20px; /* Space between the images */
+    }
+
+    .slide img {
+        width: 100%; /* Makes sure the images fill the grid cell */
+        height: 200px; /* Fixed height for the images */
+    }
+}
+/*************************************************************************************************************/
+/**************Projects**************************************************************************************/
+.pdf-tile { 
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    height: 400px;
+    background-color: #f2f2f2;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px; /* Ensuring a margin between the tile and content */
+}
+
+/* Hover effect on tile */
+.pdf-tile:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    background-color: #e0e0e0;
+}
+
+/* The anchor link makes the tile clickable */
+.pdf-tile a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: block;
+    z-index: 10;
+    text-decoration: none;
+}
+
+/* iframe styling for PDF display */
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+    object-fit: cover; /* Ensure the document fits without scrollbars */
+}
+
+/* Make the tile responsive */
+@media (max-width: 768px) {
+    .pdf-tile {
+        max-width: 100%;  /* Full width on smaller screens */
+        height: 300px;  /* Adjust height for better view */
+    }
+
+    .homeimage, .pdf-tile {
+        width: 100%; /* Full width for smaller screens */
+        margin-bottom: 20px; /* Space between sections */
+    }
+
+    /* Fixed class for column-based layout */
+    .md-w-1/3 {
+        width: 100%; /* Full width for smaller screens */
+        text-align: center; /* Center text and content */
+    }
+}
+
+/* Increased margin between text and tile */
+.md\:pl-10 {
+    padding-left: 30px; /* Increased padding between text and tile */
+}
+
+/* Block alignment for text */
+.block {
+    display: block;
+}
+
+/* Increased spacing between text and tile */
+.mt-5 {
+    margin-top: 25px; /* Increased margin-top for spacing */
+}
+/*************************************************************************************************************
+********************Project & Certifications*****************************************************************/
+/* Fix button spacing in small screens */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Ensures spacing between buttons */
+    flex-wrap: wrap; /* Allows buttons to stack properly if needed */
+}
+
+.project-btn, .certificate-btn {
+    width: 150px; /* Ensures uniform button width */
+    min-width: 120px; /* Prevents excessive shrinking */
+}
+
+/* Existing button styles */
+.project-btn {
+    background: linear-gradient(135deg, #00FFCC, #00CCFF);
+    color: black;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 255, 204, 0.4);
+    transition: all 0.3s ease;
+}
+
+.certificate-btn {
+    background: linear-gradient(135deg, #FFCC00, #FF9900);
+    color: black;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(255, 204, 0, 0.4);
+    transition: all 0.3s ease;
+}
+
+.project-btn:hover {
+    background: linear-gradient(135deg, #00CCFF, #00FFCC);
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 255, 204, 0.6);
+}
+
+.certificate-btn:hover {
+    background: linear-gradient(135deg, #FF9900, #FFCC00);
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(255, 204, 0, 0.6);
+}
+/* Style for the ESC (close) button in the modal */
+#imageModal button {
+    color: red;  /* Change 'red' to any color you prefer */
+    font-size: 20px;  /* Adjust size if necessary */
+    font-weight: bold;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+#imageModal button:hover {
+    color: #FF6347;  /* A different color on hover (like Tomato) */
+}
+/*************************************************************************************************************/
+/******************Contact************************************************************************************/
+/* Contact Section Styles */
+.contact {
+    background-color: #2a2a2a; /* Dark background for the contact section */
+    border: 1px solid #3a3a3a; /* Border to define the section */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Inner spacing */
+    margin: 20px; /* Space around the section */
+    max-width: 1200px; /* Limit max-width for larger screens */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#contact h2 {
+    color: #ffcc00; /* Color for the header */
+    margin-bottom: 10px; /* Space below the header */
+    font-size: 2rem; /* Slightly smaller for better layout */
+}
+
+#contact p {
+    color: #ffffff; /* Text color for the paragraph */
+    margin-bottom: 15px; /* Space below the paragraph */
+}
+
+.form-group {
+    margin-bottom: 15px; /* Space between form fields */
+}
+
+label {
+    display: block; /* Make labels block elements */
+    color: #ffcc00; /* Color for labels */
+    margin-bottom: 5px; /* Space below labels */
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%; /* Full width input fields */
+    padding: 10px; /* Padding inside fields */
+    border: 1px solid #3a3a3a; /* Border style */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #0e0e0e; /* Background color */
+    color: #ffffff; /* Text color */
+    font-size: 16px; /* Font size for better readability */
+    margin-bottom: 15px; /* Space below each input */
+}
+
+/* Ensure textarea has height */
+textarea {
+    height: 100px; /* Set a fixed height for the textarea */
+    resize: vertical; /* Allow vertical resizing */
+}
+
+/* Button Styling */
+.submit-button {
+    background-color: #00ffcc; /* Button background color */
+    color: #0e0e0e; /* Button text color */
+    padding: 12px 30px; /* Padding for a better appearance */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background 0.3s, transform 0.3s; /* Smooth background and transform on hover */
+    font-size: 16px; /* Font size for the button */
+    margin-top: 15px; /* Space above the button */
+    display: inline-block; /* Allow the button to be responsive */
+    width: auto; /* Button width adjusts with content */
+    max-width: 200px; /* Limit button width */
+    text-align: center; /* Ensure text is centered */
+}
+
+.submit-button:hover {
+    background-color: #00cc99; /* Darker color on hover */
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* For responsive design (on mobile screens) */
+@media (max-width: 768px) {
+    .contact {
+        padding: 15px; /* Adjust padding for mobile screens */
+        margin: 10px; /* Reduced margin on smaller screens */
+    }
+
+    #contact h2 {
+        font-size: 1.5rem; /* Smaller font size for mobile */
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        max-width: 100%; /* Inputs take full width on smaller screens */
+        font-size: 14px; /* Slightly smaller text for mobile */
+    }
+
+    .submit-button {
+        width: 100%; /* Button will take full width on smaller screens */
+        padding: 12px; /* Adjust padding for mobile */
+    }
+}
+/*************************************************************************************************************/
+/********Footer**********************************************************************************************/
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #3a3a3a;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    color: #ffcc00;
+}
+
+.social-links {
+    margin-top: 10px; /* Space above the social links */
+}
+
+.social-links a {
+    color: #ffcc00; /* Color of the links */
+    margin: 0 10px; /* Space between links */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Make the text bold */
+}
+
+.social-links a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+/************************************************************************************************************/
+/********RSS feed********************************************************************************************/
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel {
+    display: flex;
+    flex-wrap: nowrap;
+    animation: slide 15s linear infinite;
+}
+
+.carousel-item {
+    min-width: 30%; /* Reduce the width for smaller items */
+    margin: 10px; /* Add spacing between items */
+    transition: transform 0.5s ease;
+}
+
+.carousel-item img {
+    width: 100%; /* Ensure the image fits within its container */
+    height: auto;
+    border-radius: 8px; /* Optional: Rounded corners for a smoother look */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add some shadow */
+}
+
+/* Keyframes for sliding animation */
+@keyframes slide {
+    0%, 20% { transform: translateX(0); }
+    25%, 45% { transform: translateX(-33.33%); }
+    50%, 70% { transform: translateX(-66.66%); }
+    75%, 100% { transform: translateX(-100%); }
+}
+
+@media (max-width: 768px) {
+    .carousel-item {
+        min-width: 80%; /* Adjust for smaller screens */
+    }
+}
+
+/************************************************************************************************************/
+/*********Make it responsive*********************************************************************************/
+@media (max-width: 768px) {
+    .slide img {
+        width: 80%; /* Adjust image size on smaller screens */
+        height: auto;
+    }
+}

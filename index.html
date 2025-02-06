@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechNiKali</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <link rel="icon" href="/favicon-96x96.png" type="image/x-icon">
+
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+        }
+        .neon {
+            color: #39ff14;
+            text-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14, 0 0 15px #39ff14;
+        }
+        .grey-bg {
+            background-color: #333;
+        }
+        .transition {
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<!---------------------------------------------------------------------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------------------------------------------------------------------->
+<body>
+    <header class="bg-grey-bg p-5">
+        <h1 class="text-4xl">TechNiKali</h1>
+        <p class="text-4xl" >Swish Finesse</p>
+        <nav class="mt-4">
+            <ul class="flex space-x-4">
+                <li><a href="#home" class="transition hover:text-green-500">Home</a></li>
+                <li><a href="#services" class="transition hover:text-green-500">Services</a></li>
+                <li><a href="#projects" class="transition hover:text-green-500">My Projects</a></li>
+                <li><a href="#contact" class="transition hover:text-green-500">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+<!---------------------------------------------------------------------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------------------------------------------------------------------->
+    <section id="home" class="p-10">
+        <div class="flex flex-col md:flex-row items-center md:items-start text-center md:text-left">
+            <!-- Image Section -->
+            <div class="homeimage md:w-1/3 flex justify-start">
+                <img src="/images/DSC_8562.jpg" alt="TechNiKali Home Image" class="rounded-lg shadow-lg">
+            </div>
+            
+            <!-- Text Section -->
+            <div class="md:w-1/3 mt-5 md:mt-0 md:pl-10">
+                <h2 class="charles-text drop-shadow-lg">Charles Murima</h2><!-- Added block class -->
+                <p class="mt-4 block">Simple Solutions, Sharp Expertise</p>
+                <p class="mt-5 block">
+                    Technologically adept IT professional with expertise in network architecture, artificial intelligence, and web development. 
+                    Skilled in computer troubleshooting, hardware installation, and network automation, with hands-on experience in developing AI-powered solutions. 
+                    Successfully created and integrated a WhatsApp chatbot using RASA, improving customer response times by 30%. 
+                    Holds CCNA certifications and a Bachelor of Science in Information Technology from Zetech University. Fluent in English, Kiswahili, and proficient in French.
+                </p>
+            </div>
+    
+            <!-- CV Document Tile Section -->
+            <div class="md:w-1/3 mt-5 md:mt-0">
+                <div class="pdf-tile">
+                    <!-- The anchor link makes the tile clickable -->
+                    <a href="https://drive.google.com/file/d/1LJqoavhwz_K1loT7fLtQ-YbkTMCOH5jQ/view?usp=sharing" target="_blank"></a>
+    
+                    <!-- Embed PDF from Google Drive -->
+                    <iframe src="https://drive.google.com/file/d/1LJqoavhwz_K1loT7fLtQ-YbkTMCOH5jQ/preview" 
+                            width="100%" 
+                            height="100%" 
+                            style="border: none;">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+<!---------------------------------------------------------------------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------------------------------------------------------------------->    
+    <section id="services" class="grey-bg p-10">
+        <h2 class="text-3xl font-semibold text-center tracking-wide" style="color: #00FFCC; text-shadow: 0px 0px 8px rgba(0, 255, 204, 0.4);">
+            My Services
+        </h2>
+        <br>
+        <div class="slide">
+            <img src="/images/WhatsApp Image 2024-10-10 at 11.20.26_ea0d193f.jpg" alt="Service Image 1">
+            <img src="/images/WhatsApp Image 2024-10-10 at 11.20.27_06d79df1.jpg" alt="Service Image 2">
+            <img src="/images/WhatsApp Image 2024-12-23 at 12.36.16_1bbb0a87.jpg" alt="Service Image 3">
+            <img src="/images/WhatsApp Image 2024-12-23 at 12.36.16_a71fca6a.jpg" alt="Service Image 4">
+        </div>
+        <br>
+        <p class="text-lg font-medium text-gray-300">
+            Need Any Help? 
+            <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });"
+                class="bg-yellow-400 text-black font-bold px-4 py-2 rounded-full shadow-lg hover:bg-yellow-500 transition duration-300 transform hover:scale-105">
+                Click Me
+            </button>
+        </p>        
+        
+    </section>
+<!---------------------------------------------------------------------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------------------------------------------------------------------->
+<section id="projects" class="p-10">
+    <h2 class="text-3xl font-semibold text-center tracking-wide border-b-2 pb-2" style="color: #00FFCC; border-color: rgba(0, 255, 204, 0.5);">
+        Projects & Certifications
+    </h2>        
+    <p class="mt-4">Welcome to My Portfolio.</p> <br>
+
+    <div class="text-center my-5 button-container">
+        <button onclick="showProjects()" class="project-btn px-6 py-3 rounded-lg">
+            Projects
+        </button>
+        <button onclick="showCertificates()" class="certificate-btn px-6 py-3 rounded-lg">
+            Certificates
+        </button>
+    </div>
+    
+
+    <!-- Projects Section (Initially Hidden) -->
+    <div id="projects-section" class="grid grid-cols-2 gap-4 p-5 hidden opacity-0 transform translate-y-10 transition-all duration-500 ease-in-out">
+        <div class="bg-gray-800 text-white p-5 rounded-lg"><img src="/images/CtoF.jpg" alt=""></div>
+        <div class="bg-gray-800 text-white p-5 rounded-lg">Project 2</div>
+        <div class="bg-gray-800 text-white p-5 rounded-lg">Project 3</div>
+        <div class="bg-gray-800 text-white p-5 rounded-lg">Project 4</div>
+    </div>
+
+    <!-- Certificates Section (Initially Hidden) -->
+<div id="certificates-section" class="grid grid-cols-3 gap-4 p-5 hidden opacity-0 transform translate-y-10 transition-all duration-500 ease-in-out">
+    <div class="bg-gray-800 text-white p-5 rounded-lg cursor-pointer" onclick="openModal('/images/CCNAv7 ENSA.jpg')">
+        <img src="/images/CCNAv7 ENSA.jpg" alt="CCNAv7 ENSA">
+    </div>
+    <div class="bg-gray-800 text-white p-5 rounded-lg cursor-pointer" onclick="openModal('/images/CCNAv7 SRW.jpg')">
+        <img src="/images/CCNAv7 SRW.jpg" alt="CCNAv7 SRW">
+    </div>
+    <div class="bg-gray-800 text-white p-5 rounded-lg cursor-pointer" onclick="openModal('/images/AMLD Africa.jpg')">
+        <img src="/images/AMLD Africa.jpg" alt="AMLD Africa">
+    </div>
+</div>
+
+<!-- Image Preview Modal -->
+<div id="imageModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 hidden">
+    <div class="relative bg-white p-4 rounded-lg max-w-lg">
+        <button onclick="closeModal()" class="absolute top-2 right-2 text-lg font-bold">✖</button>
+        <img id="modalImage" src="" alt="Certificate Preview" class="w-full h-auto rounded">
+    </div>
+</div>
+</section>
+
+<!---------------------------------------------------------------------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------------------------------------------------------------------->
+<section id="contact" class="grey-bg p-10">
+
+    <h2 class="text-3xl font-semibold text-center tracking-wide" style="color: #FFCC00;">
+        Contact Me
+    </h2>
+    <p class="text-center">I'd love to hear from you! Please fill out the form below:</p>
+    <div class="contact">
+    <form action="https://formsubmit.co/murimac91@gmail.com" method="POST" class="mt-5">
+        <input type="hidden" name="_subject" value="New Contact Form Submission!">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        
+        <div class="form-group">
+            <label for="name" class="block">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" class="p-2 mb-4 w-full" required>
+        </div>
+        <div class="form-group">
+            <label for="email" class="block">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" class="p-2 mb-4 w-full" required>
+        </div>
+        <div class="form-group">
+            <label for="message" class="block">Message:</label>
+            <textarea id="message" name="message" placeholder="Your Message" class="p-2 mb-4 w-full" required></textarea>
+        </div>
+        <button type="submit" class="bg-green-500 text-black p-2 rounded submit-button">
+            Send Message
+        </button>
+    </form>
+    
+    </div>
+</section>
+
+ <!--------------------------------------------------------------------------------------------------------------------------------------------->
+ <!--------------------------------------------------------------------------------------------------------------------------------------------->   
+
+ <footer class="p-5 text-center text-gray-300" style="background-color: #2A2A2A;">
+
+    <p class="text-center font-medium" style="color: #FFCC00;">
+        2025 TechNiKali. All rights reserved
+    </p>
+    
+    <div class="flex justify-center space-x-4 mt-2">
+        <a href="https://www.instagram.com/" target="_blank" class="text-gray-300 hover:text-pink-500 transition duration-300" aria-label="Instagram">
+            <i class="fab fa-instagram"></i> Instagram
+        </a>
+        <a href="https://wa.me/0701048678" target="_blank" class="text-gray-300 hover:text-green-400 transition duration-300" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+        <a href="https://www.linkedin.com/" target="_blank" class="text-gray-300 hover:text-blue-400 transition duration-300" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        <a href="https://www.youtube.com/" target="_blank" class="text-gray-300 hover:text-red-500 transition duration-300" aria-label="YouTube">
+            <i class="fab fa-youtube"></i> YouTube
+        </a>
+    </div>        
+</footer>
+
+    <script>
+        // AI Chatbot and Live Diagnostics Tool functionality can be implemented here
+    </script>
+</body>
+</html>
